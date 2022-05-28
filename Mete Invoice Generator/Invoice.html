@@ -21,7 +21,7 @@
                     </div>
                     <div class="text float-right">
                         <h1>INVOICE</h1>
-                        <p>Invoice #202201</p>
+                        <p>Invoice #202202</p>
                     </div>
                 </div>
             </div>
@@ -107,6 +107,18 @@
                 <tr>
                     <td class="empty">----------------------------------</td>
                     <td class="empty">----------------------------------</td>
+                    <td class="yom"><p>PAID:</p></td>
+                    <td class="yomi"><p>&#8358;<span id="PaidRes"></span> </p></td>
+                </tr>
+                <tr>
+                    <td class="empty">----------------------------------</td>
+                    <td class="empty">----------------------------------</td>
+                    <td class="yom"><p>OWING:</p></td>
+                    <td class="yomi"><p>&#8358;<span id="OwingRes"></span> </p></td>
+                </tr>
+                <tr>
+                    <td class="empty">----------------------------------</td>
+                    <td class="empty">----------------------------------</td>
                     <td class="yom"><p>SUB TOTAL:</p></td>
                     <td class="yomi"><p>&#8358;<span id="subTotal"></span> </p></td>
                 </tr>
@@ -150,8 +162,15 @@
         document.getElementById("descRes2").innerHTML = localStorage.getItem("Desc2");
         document.getElementById("qtyRes2").innerHTML = localStorage.getItem("QT2");
 
+        document.getElementById("OwingRes").innerHTML = localStorage.getItem("Owing");
+        document.getElementById("PaidRes").innerHTML = localStorage.getItem("Paid");
+
         document.getElementById("discount").innerHTML = localStorage.getItem("Discount") + "%";
         document.getElementById("subTotal").innerHTML = localStorage.getItem("result");
+    </script>
+
+    <script>
+        window.print();
     </script>
 
 </body>
