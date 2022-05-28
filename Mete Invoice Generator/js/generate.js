@@ -8,8 +8,13 @@ function passValue(){
     var Discount = document.getElementById("disco").value;
     var QT = document.getElementById("qt").value;
     var QT2 = document.getElementById("qt2").value;
+
+    var Paid = document.getElementById("paid").value;
+    
     var Total = (Price * QT);
     var Total2 = (Price2 * QT2);
+
+    
  
     localStorage.setItem("Name" , Name);
     localStorage.setItem("Date" , Date);
@@ -23,12 +28,16 @@ function passValue(){
     localStorage.setItem("QT2" , QT2);
     localStorage.setItem("Total" , Total);
     localStorage.setItem("Total2" , Total2);
+    localStorage.setItem("Paid" , Paid);
+   
+    
 
     var Discon = Discount / 100;
     var Disi = Total += Total2;
     var result = parseFloat(Disi - (Disi * Discon));
-   
+    var Owing = result - Paid;
     localStorage.setItem("result" , result);
+    localStorage.setItem("Owing" , Owing);
    
     return false;
 }

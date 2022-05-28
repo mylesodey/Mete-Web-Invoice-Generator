@@ -1,4 +1,7 @@
-
+.holding{
+    transform: scale(0.9);
+    padding-bottom: 40px;
+}
 
 .holding .top{
     display: flex;
@@ -11,7 +14,7 @@
 display: flex;
 justify-content: center;
 transform: scale(0.5);
-margin-top: -100px;
+margin-top: -160px;
 }
 
 
